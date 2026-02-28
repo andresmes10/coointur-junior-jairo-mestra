@@ -96,12 +96,15 @@ const EditarUsuario = () => {
           </Button>
 
           <Button
-            variant="outlined"
-            color="inherit"
-            onClick={() => navigate("/")}
-          >
-            Cancelar
-          </Button>
+  variant="outlined"
+  color="inherit"
+  onClick={() => {
+    dispatch(clearMensaje()); // limpiar cualquier mensaje pendiente
+    navigate("/");
+  }}
+>
+  Cancelar
+</Button>
         </Stack>
       </Stack>
     </Box>
