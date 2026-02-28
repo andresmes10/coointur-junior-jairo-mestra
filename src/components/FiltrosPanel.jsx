@@ -1,3 +1,8 @@
+// Panel de filtros de usuarios
+// - Permite filtrar por nombre y email
+// - Botón para limpiar todos los filtros
+// - Actualiza los filtros en el slice de Redux
+
 import { useDispatch, useSelector } from "react-redux";
 import { setBusqueda, setEmailFiltro, limpiarFiltros } from "../store/slices/datosSlice";
 import { TextField, Button, Box } from "@mui/material";

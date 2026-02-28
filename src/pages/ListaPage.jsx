@@ -1,3 +1,7 @@
+// Página principal de gestión de usuarios
+// Muestra tabla de usuarios, panel de filtros y botones de acción
+// Aplica filtros en tiempo real y maneja mensajes de éxito/error
+
 import { useSelector, useDispatch } from "react-redux";
 import { useEffect } from "react";
 import { useNavigate } from "react-router-dom";

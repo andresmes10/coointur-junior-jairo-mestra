@@ -1,3 +1,9 @@
+// Punto de entrada principal de la aplicación React
+// - Configura React 18 con createRoot
+// - Envuelve la app con Redux Provider y BrowserRouter
+// - Registra los módulos necesarios de AG Grid para las tablas
+// - Aquí se inicializa toda la aplicación antes de renderizarla en el DOM
+
 import React from "react";
 import ReactDOM from "react-dom/client";
 import { BrowserRouter } from "react-router-dom";

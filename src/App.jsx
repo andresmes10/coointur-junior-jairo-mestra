@@ -1,3 +1,6 @@
+// Configuración de rutas de la aplicación usando React Router v6
+// Define rutas para lista, crear, editar y detalle de usuarios
+
 import { Routes, Route } from "react-router-dom";
 
 import Layout from "./components/Layout";

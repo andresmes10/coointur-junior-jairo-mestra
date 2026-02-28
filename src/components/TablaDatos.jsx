@@ -1,3 +1,7 @@
+// Tabla de usuarios usando AG Grid
+// Muestra datos y acciones (ver, editar, eliminar)
+// Maneja confirmación de eliminación y actualiza Redux
+
 import { useState } from "react";
 import { AgGridReact } from "ag-grid-react";
 import { useNavigate } from "react-router-dom";

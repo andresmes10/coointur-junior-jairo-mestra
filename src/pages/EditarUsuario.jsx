@@ -1,3 +1,8 @@
+
+// Componente para editar un usuario existente
+// Carga datos del usuario desde Redux usando el id de la ruta
+// Permite modificar campos y guardar cambios en Redux
+
 import { useParams, useNavigate } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
 import { useState } from "react";
@@ -96,15 +101,12 @@ const EditarUsuario = () => {
           </Button>
 
           <Button
-  variant="outlined"
-  color="inherit"
-  onClick={() => {
-    dispatch(clearMensaje()); // limpiar cualquier mensaje pendiente
-    navigate("/");
-  }}
->
-  Cancelar
-</Button>
+            variant="outlined"
+            color="inherit"
+            onClick={() => navigate("/")}
+          >
+            Cancelar
+          </Button>
         </Stack>
       </Stack>
     </Box>

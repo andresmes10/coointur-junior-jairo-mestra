@@ -1,3 +1,7 @@
+// Componente para crear un nuevo usuario
+// Maneja formulario controlado y valida los campos obligatorios
+// Actualiza Redux y navega a la lista de usuarios tras guardar
+
 import { useState } from "react";
 import { useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
@@ -97,15 +101,12 @@ const CrearUsuario = () => {
           </Button>
 
           <Button
-  variant="outlined"
-  color="inherit"
-  onClick={() => {
-    dispatch(clearMensaje()); // limpiar cualquier mensaje pendiente
-    navigate("/");
-  }}
->
-  Cancelar
-</Button>
+            variant="outlined"
+            color="inherit"
+            onClick={() => navigate("/")}
+          >
+            Cancelar
+          </Button>
         </Stack>
       </Stack>
     </Box>

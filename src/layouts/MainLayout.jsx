@@ -1,3 +1,8 @@
+// Layout alternativo de la aplicación
+// - Barra superior con título clickable para volver al inicio
+// - Contenedor principal para las páginas usando <Outlet />
+// Puede servir para diferenciar secciones o roles de usuario
+
 import { Outlet, useNavigate } from "react-router-dom";
 import { AppBar, Toolbar, Typography, Container } from "@mui/material";
 

@@ -1,3 +1,6 @@
+// Configuración de Redux store
+// Combina slices como datos para usuarios
+
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 import { fetchUsers } from "../../api/usersApi";
 import { saveToLocalStorage, loadFromLocalStorage } from "../../utils/localStorage";

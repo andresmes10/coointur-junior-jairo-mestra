@@ -1,3 +1,7 @@
+// Componente para mostrar detalle completo de un usuario
+// Obtiene los datos desde Redux según el id de la ruta
+// Permite volver a la lista de usuarios
+
 import { useParams, useNavigate } from "react-router-dom";
 import { useSelector } from "react-redux";
 import { Card, CardContent, Typography, Button, Chip, Box } from "@mui/material";
