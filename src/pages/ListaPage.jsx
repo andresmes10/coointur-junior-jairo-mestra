@@ -10,14 +10,16 @@ const ListaPage = () => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
 
-  const { lista, loading, error, mensaje } = useSelector(
+  const { lista, filtros, loading, error, mensaje } = useSelector(
     (state) => state.datos
   );
 
+  // Cargar usuarios al montar el componente
   useEffect(() => {
     dispatch(getUsers());
   }, [dispatch]);
 
+  // Limpiar mensaje después de 3 segundos
   useEffect(() => {
     if (mensaje) {
       const timer = setTimeout(() => {
@@ -27,6 +29,17 @@ const ListaPage = () => {
       return () => clearTimeout(timer);
     }
   }, [mensaje, dispatch]);
+
+  // Aplicar filtros de búsqueda y email
+  const listaFiltrada = lista.filter((usuario) => {
+    const nombreCoincide = usuario.name
+      .toLowerCase()
+      .includes(filtros.busqueda.toLowerCase());
+    const emailCoincide = usuario.email
+      .toLowerCase()
+      .includes(filtros.email.toLowerCase());
+    return nombreCoincide && emailCoincide;
+  });
 
   return (
     <>
@@ -48,7 +61,7 @@ const ListaPage = () => {
       {loading && <p>Cargando...</p>}
       {error && <p style={{ color: "red" }}>{error}</p>}
 
-      {!loading && !error && <TablaDatos datos={lista} />}
+      {!loading && !error && <TablaDatos datos={listaFiltrada} />}
 
       <Snackbar open={!!mensaje} message={mensaje} />
     </>
